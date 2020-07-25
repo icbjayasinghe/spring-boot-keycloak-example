@@ -1,4 +1,4 @@
-package org.example.employee;
+package org.example.deparment;
 
 //@SpringBootTest
 class ApplicationTests {

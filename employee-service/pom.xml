@@ -11,11 +11,6 @@
 
 	<artifactId>employee-service</artifactId>
 
-    <properties>
-        <java.version>8</java.version>
-        <keycloak.version>9.0.2</keycloak.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -58,20 +53,7 @@
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
             <version>2.2.6.RELEASE</version>
         </dependency>
-
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.keycloak.bom</groupId>
-                <artifactId>keycloak-adapter-bom</artifactId>
-                <version>${keycloak.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
