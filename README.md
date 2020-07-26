@@ -3,6 +3,12 @@
 This example project show how to integrate KeyCloak with Spring-boot Micro services. \
 Also the inter service communication is done between the services those are secured.
 
+###Prerequisites
+
+1. ``docker`` should be installed in the environment
+2. ``Maven`` should be installed in the environment
+3. ``8001, 8002, 8083`` ports should be free.
+
 ### Setup KeyCloak Service
 
 1. run following command to run keycloak container in the local machine
@@ -77,6 +83,14 @@ Add to User info: ON
 and ``Save`` it.
 
 ### Update Spring-boot micro services
+
+``keycloak.credentials.secret`` value should be updated with in the each service ``application.properties`` file.
+
+1. update ``employee`` service.  Navigate to ``company Realm > Clients > employee > Credentials > Secret`` and copy value \
+and update the value in ``application.properties`` file in the ``employee`` service.
+
+2. update ``department`` service.  Navigate to ``company Realm > Clients > department > Credentials > Secret`` and copy value \
+and update the value in ``application.properties`` file in the ``department`` service.
 
 ### Start Services
 
